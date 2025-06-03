@@ -16,9 +16,5 @@
     "typeRoots": ["./node_modules/@types", "./types"]
   },
   "include": ["src/**/*"],
-  "references": [
-    {
-      "path": "../../packages/types"
-    }
-  ]
+  "references": []
 }

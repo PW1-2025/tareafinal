@@ -1,7 +1,17 @@
-import { JwtUserPayload, User } from '@san-juan-store/types';
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
 
+interface JwtUserPayload {
+    id: string;
+    name: string;
+    email: string;
+}
+
+interface User{
+    id: string;
+    name: string;
+    email: string;
+}
 declare global {
     namespace Express {
         interface Request {
