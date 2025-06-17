@@ -104,4 +104,10 @@ export const sales_details = mysqlTable('sales_details', {
     idx_sale: index('fk_sales_details_sales1_idx').on(table.sale_id),
     idx_product: index('fk_sales_details_products1_idx').on(table.product_id),
 }));
+
+export const casamientos = mysqlTable('casamientos', {
+    id: int('id').primaryKey().autoincrement(),
+    persona1: varchar('persona_1', { length: 45 }).notNull(),
+    persona2: varchar('persona_2', { length: 45 }).notNull()
+});
   
