@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { Request, Response } from 'express';
 import { login } from 'src/controller/auth.controller';
+import { createCasamiento, getAllCasamientos } from 'src/controller/casamientos.controller';
 import {
   createProduct,
   deleteProduct,
@@ -34,5 +35,8 @@ router.get('/products', verifyToken, getAllProducts);
 router.post('/products', verifyToken, createProduct);
 router.put('/products/:id', verifyToken, updateProduct);
 router.delete('/products/:id', verifyToken, deleteProduct);
+
+router.get('/casamientos', getAllCasamientos);
+router.post('/casamientos', createCasamiento);
 
 export default router;
